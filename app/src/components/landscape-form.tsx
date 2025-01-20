@@ -52,7 +52,7 @@ export function LandscapeForm({ className }: React.ComponentProps<typeof Card>) 
           Transform your outdoor space with our professional landscaping services
         </CardDescription>
       </CardHeader>
-      <form action={formAction}>
+      <form action={()=> undefined}>
         <CardContent className="space-y-6">
           {state.success ? (
             <p className="text-emerald-400 flex items-center gap-2 text-sm">
