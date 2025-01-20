@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react"
 import { motion, useMotionValue, useSpring } from "framer-motion"
-import { debounce } from "@/utils/use-debounce"
+import { debounce } from "@/controllers/utils/use-debounce"
 
 interface CursorState {
   clicked: boolean

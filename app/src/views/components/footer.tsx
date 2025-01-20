@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ARTICLES, PRODUCTS, SERVICES, TEAM_MEMBERS, SITE_VERSION } from "@/lib/constants"
+import { ARTICLES, PRODUCTS, SERVICES, TEAM_MEMBERS, SITE_VERSION } from "@/models/lib/constants"
 import {
   Facebook,
   Twitter,

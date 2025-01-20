@@ -26,10 +26,10 @@ import {
   DialogTitle,
   DialogDescription,
   DialogClose,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { fadeInUp, staggerChildren, rotateIn } from "@/lib/animation-variants"
+} from "@/views/elements/dialog"
+import { Input } from "@/views/elements/input"
+import { Button } from "@/views/elements/button"
+import { fadeInUp, staggerChildren, rotateIn } from "@/models/lib/animation-variants"
 
 interface Message {
   type: "user" | "ai"

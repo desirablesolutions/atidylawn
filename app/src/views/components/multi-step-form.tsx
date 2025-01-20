@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Slider } from "@/components/ui/slider"
-import { SERVICES } from "@/lib/constants"
-import { submitToNotion } from "@/lib/notion"
+import { Button } from "@/views/elements/button"
+import { Input } from "@/views/elements/input"
+import { Textarea } from "@/views/elements/textarea"
+import { Slider } from "@/views/elements/slider"
+import { SERVICES } from "@/models/lib/constants"
+import { submitToNotion } from "@/models/lib/notion"
 import { CheckCircle, Circle, Calendar, Clock, MapPin, CreditCard, Send, Users } from "lucide-react"
-import { fadeInUp, staggerChildren, scaleIn } from "@/lib/animation-variants"
+import { fadeInUp, staggerChildren, scaleIn } from "@/models/lib/animation-variants"
 
 // Enhanced form data interface
 interface FormData {
