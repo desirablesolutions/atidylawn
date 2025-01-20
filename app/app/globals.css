@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2f5233;
+  --primary-dark: #1a2e1d;
+  --sky: #87ceeb;
+  --sky-dark: #5f90a3;
+}
+
+.dark {
+  --primary: #4a8f52;
+  --primary-dark: #2f5233;
+  --sky: #a8e0f7;
+  --sky-dark: #87ceeb;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  /* Hide default cursor */
+  * {
+    cursor: none !important;
+  }
+
+  /* Enhanced hover animations */
+  a,
+  button {
+    @apply transition-all duration-300;
+  }
+
+  /* Advanced animated border effect */
+  .animated-border {
+    @apply relative overflow-hidden;
+  }
+
+  .animated-border::before,
+  .animated-border::after {
+    @apply content-[''] absolute w-0 h-0.5 bg-green-500 transition-all duration-500;
+  }
+
+  .animated-border::before {
+    @apply left-0 bottom-0;
+  }
+
+  .animated-border::after {
+    @apply right-0 top-0;
+  }
+
+  .animated-border:hover::before,
+  .animated-border:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  /* Enhanced neon effects */
+  .neon-border {
+    @apply border-2 border-transparent transition-all duration-300;
+  }
+
+  .dark .neon-border:hover {
+    @apply border-green-400 shadow-[0_0_30px_rgba(74,143,82,0.7)];
+    animation: neon-pulse 1.5s ease-in-out infinite alternate;
+  }
+
+  .neon-text {
+    @apply transition-all duration-300;
+  }
+
+  .dark .neon-text:hover {
+    @apply text-green-400;
+    text-shadow: 0 0 10px rgba(74, 143, 82, 0.7), 0 0 20px rgba(74, 143, 82, 0.5), 0 0 30px rgba(74, 143, 82, 0.3);
+  }
+
+  /* Enhanced floating animation */
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+    25% {
+      transform: translate(5px, -10px) rotate(2deg);
+    }
+    50% {
+      transform: translate(0, -5px) rotate(0);
+    }
+    75% {
+      transform: translate(-5px, -10px) rotate(-2deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+  }
+
+  /* Advanced gradient animation */
+  .gradient-animate {
+    background: linear-gradient(
+      45deg,
+      theme("colors.green.500"),
+      theme("colors.emerald.500"),
+      theme("colors.green.400"),
+      theme("colors.emerald.400")
+    );
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Neon pulse animation */
+  @keyframes neon-pulse {
+    from {
+      box-shadow: 0 0 10px rgba(74, 143, 82, 0.7), 0 0 20px rgba(74, 143, 82, 0.5), 0 0 30px rgba(74, 143, 82, 0.3);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(74, 143, 82, 0.7), 0 0 30px rgba(74, 143, 82, 0.5), 0 0 40px rgba(74, 143, 82, 0.3);
+    }
+  }
+
+  /* 3D transform effects */
+  .hover-3d {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
+    transition: transform 0.3s ease;
+  }
+
+  .hover-3d:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  }
+
+  /* Parallax scroll effect */
+  .parallax {
+    transform: translateZ(0);
+    transition: transform 0.3s ease;
+  }
+
+  .parallax-slow {
+    transform: translateZ(-100px);
+  }
+
+  .parallax-fast {
+    transform: translateZ(100px);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green```css file="app/globals.css" continued
+::-webkit-scrollbar-thumb {
+  @apply bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-500 rounded-full;
+}
+
+/* Custom selection styling */
+::selection {
+  @apply bg-green-500/20 text-green-900 dark:text-green-100;
+}
+
+/* Focus outline styling */
+:focus {
+  @apply outline-none ring-2 ring-green-500 ring-offset-2 dark:ring-offset-gray-900;
+}
+
+/* Loading animations */
+.loading-dots div {
+  animation: loading-dots 1.4s infinite ease-in-out both;
+}
+
+.loading-dots div:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots div:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes loading-dots {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Shimmer effect for loading states */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    theme('colors.gray.200') 0%,
+    theme('colors.gray.100') 50%,
+    theme('colors.gray.200') 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.dark .card-hover {
+  @apply hover:shadow-green-500/10;
+}
+
+/* Input focus effects */
+.input-focus-effect {
+  @apply transition-all duration-300 border-gray-200 dark:border-gray-700;
+}
+
+.input-focus-effect:focus {
+  @apply border-green-500 dark:border-green-400 shadow-[0_0_0_2px_rgba(74,143,82,0.1)];
+}
+
