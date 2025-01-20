@@ -37,6 +37,7 @@ interface Message {
   timestamp: Date
 }
 
+
 export function AIHelp() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeTab, setActiveTab] = useState<"chat" | "tips">("tips")
