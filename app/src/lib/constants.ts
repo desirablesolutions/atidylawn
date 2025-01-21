@@ -1,14 +1,5 @@
-export const SITE_VERSION = "1.0.1"
+export const SITE_VERSION = "1.0.0"
 
-import { GrapeIcon as Grass, Users, Info, Phone, Flower, TreesIcon as Tree, Droplet } from "lucide-react"
-
-
-export const icons = {
-  grass: Grass,
-  flower: Flower,
-  tree: Tree,
-  droplet: Droplet,
-}
 export const SERVICES = [
   {
     id: "1",
@@ -173,5 +164,5 @@ export const NAV_LINKS = [
       { name: "Locations", href: "#locations" },
     ],
   },
-]
+] as const
 
