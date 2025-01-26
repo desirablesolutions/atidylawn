@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 
 const styles = {
   container: () => `min-h-screen bg-white dark:bg-black font-thin cursor-none`,
+  application: ()=> `${geistSans.variable} ${geistMono.variable} antialiased`
 }
 
 
@@ -34,17 +35,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={styles.application()}>
         <ThemeProvider>
           <Header />
-
           <div className={styles.container()}>
             {children}
-
           </div>
-
           <Footer />
         </ThemeProvider>
       </body>
