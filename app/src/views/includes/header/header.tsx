@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react"
-import { useTheme } from "@/components/theme-context"
-import { NAV_LINKS } from "@/lib/constants"
+import { useTheme } from "@/views/components/theme-context"
+import { NAV_LINKS } from "@/controllers/lib/constants"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 

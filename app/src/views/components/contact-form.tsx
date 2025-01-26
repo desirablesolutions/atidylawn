@@ -1,11 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { submitToNotion } from "@/lib/notion"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { SERVICES } from "@/lib/constants"
+import { submitToNotion } from "@/controllers/lib/notion"
+import { Button } from "@/views/components/ui/button"
+import { Input } from "@/views/components/ui/input"
+import { Textarea } from "@/views/components/ui/textarea"
+import { SERVICES } from "@/controllers/lib/constants"
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)

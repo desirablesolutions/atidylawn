@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useEffect, useState } from "react"
-import type { Theme } from "@/lib/types"
+import type { Theme } from "@/controllers/lib/types"
 
 interface ThemeContextType {
   theme: Theme

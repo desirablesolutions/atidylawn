@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Slider } from "@/components/ui/slider"
-import { SERVICES } from "@/lib/constants"
-import { submitToNotion } from "@/lib/notion"
+import { Button } from "@/views/components/ui/button"
+import { Input } from "@/views/components/ui/input"
+import { Textarea } from "@/views/components/ui/textarea"
+import { Slider } from "@/views/components/ui/slider"
+import { SERVICES } from "@/controllers/lib/constants"
+import { submitToNotion } from "@/controllers/lib/notion"
 import { CheckCircle, Circle, Calendar, Clock, MapPin, CreditCard, Send, Users } from "lucide-react"
-import { fadeInUp, staggerChildren, scaleIn } from "@/lib/animation-variants"
+import { fadeInUp, staggerChildren, scaleIn } from "@/controllers/lib/animation-variants"
 
 // Enhanced form data interface
 interface FormData {
@@ -169,7 +169,7 @@ export function MultiStepForm() {
           <h3 className="text-lg font-thin">Form Progress</h3>
           <span className="text-green-500">{Math.round(formProgress)}% Complete</span>
         </div>
-        <div className="relative h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div className="relative h-2 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
           <motion.div
             className="absolute top-0 left-0 h-full bg-green-500 dark:bg-green-400"
             initial={{ width: 0 }}
@@ -245,19 +245,19 @@ export function MultiStepForm() {
       <motion.div variants={fadeInUp} className="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg">
         <h3 className="text-xl font-thin mb-4">Service Summary</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
+          <div className="p-4 bg-white dark:bg-black rounded-lg">
             <p className="text-sm text-gray-500 dark:text-gray-400">Selected Services</p>
             <p className="text-2xl font-thin">{formData.selectedServices.length}</p>
           </div>
-          <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
+          <div className="p-4 bg-white dark:bg-black rounded-lg">
             <p className="text-sm text-gray-500 dark:text-gray-400">Property Size</p>
             <p className="text-2xl font-thin">{formData.propertySize} sq ft</p>
           </div>
-          <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
+          <div className="p-4 bg-white dark:bg-black rounded-lg">
             <p className="text-sm text-gray-500 dark:text-gray-400">Frequency</p>
             <p className="text-2xl font-thin capitalize">{formData.frequency}</p>
           </div>
-          <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
+          <div className="p-4 bg-white dark:bg-black rounded-lg">
             <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Total</p>
             <p className="text-2xl font-thin">${calculateTotal(formData)}</p>
           </div>
