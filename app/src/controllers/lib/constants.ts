@@ -34,40 +34,32 @@ export const SERVICES = [
 export const TEAM_MEMBERS = [
   {
     id: "1",
-    name: "John Smith",
+    name: "Joshua Desir",
     role: "Lead Landscaper",
     image: "/placeholder.svg?height=400&width=400",
     bio: "15 years of experience in landscape design and maintenance",
     specialties: ["Design", "Installation", "Maintenance"],
-    certifications: ["Certified Landscape Professional", "Irrigation Specialist"],
+    certifications: ["Landscaper"],
   },
   {
     id: "2",
-    name: "Sarah Johnson",
-    role: "Design Specialist",
+    name: "Jeffrey Desir",
+    role: "Contributor",
     image: "/placeholder.svg?height=400&width=400",
     bio: "Award-winning landscape designer with a focus on sustainable practices",
     specialties: ["Sustainable Design", "Native Plants", "Water Conservation"],
-    certifications: ["LEED Certified", "Ecological Landscaping"],
+    certifications: ["IT Certified", "Ecological Landscaping"],
   },
   {
     id: "3",
-    name: "Michael Rodriguez",
-    role: "Horticulturist",
+    name: "J.A.R.V.E.I.S",
+    role: "AGI",
     image: "/placeholder.svg?height=400&width=400",
     bio: "Expert in plant health and organic gardening methods",
     specialties: ["Plant Care", "Organic Methods", "Disease Management"],
     certifications: ["Master Gardener", "Plant Health Care Specialist"],
   },
-  {
-    id: "4",
-    name: "Emily Chen",
-    role: "Client Relations Manager",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "Dedicated to ensuring exceptional customer service and project coordination",
-    specialties: ["Project Management", "Customer Service", "Scheduling"],
-    certifications: ["Customer Service Excellence", "Project Management Professional"],
-  },
+\
 ]
 
 export const ARTICLES = [
