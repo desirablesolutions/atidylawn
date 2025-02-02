@@ -9,7 +9,7 @@ const icons = {
   droplet: Droplet,
 }
 
-export function Servics() {
+export function Services() {
 
     return (
     <section id="services" className="py-16 px-4 bg-gray-50 dark:bg-gray-800">

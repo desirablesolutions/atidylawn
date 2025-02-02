@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/views/components/theme-context";
 import { Header } from "@/views/includes/header";
 import { Footer } from "@/views/includes/footer/";
+import { AIHelp } from "@/views/includes/AI";
 
 
 const geistSans = Geist({
@@ -42,6 +43,7 @@ export default function RootLayout({
             {children}
           </div>
           <Footer />
+          <AIHelp />
         </ThemeProvider>
       </body>
     </html>
