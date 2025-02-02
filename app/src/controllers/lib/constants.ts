@@ -59,7 +59,6 @@ export const TEAM_MEMBERS = [
     specialties: ["Plant Care", "Organic Methods", "Disease Management"],
     certifications: ["Master Gardener", "Plant Health Care Specialist"],
   },
-\
 ]
 
 export const ARTICLES = [
